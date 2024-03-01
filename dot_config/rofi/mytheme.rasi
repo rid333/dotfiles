@@ -1,0 +1,84 @@
+configuration {
+  font: "JetBrains Mono Nerd Font 10";
+
+  drun {
+    display-name: "";
+  }
+
+  run {
+    display-name: "";
+  }
+
+  window {
+    display-name: "";
+  }
+
+  timeout {
+    delay: 10;
+    action: "kb-cancel";
+  }
+}
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 3px;
+  spacing: 0;
+
+  bg-alt: #ffffff;
+  bg: #000000;
+  fg-alt: #000000;
+  fg: #ffffff;
+
+  background-color: @bg;
+  text-color: @fg;
+}
+
+window {
+  transparency: "real";
+}
+
+mainbox {
+  children: [inputbar, listview];
+}
+
+inputbar {
+  background-color: @bg;
+  children: [prompt, entry];
+}
+
+entry {
+  background-color: inherit;
+  padding: 12px 3px;
+}
+
+prompt {
+  background-color: inherit;
+  padding: 12px;
+}
+
+listview {
+  lines: 8;
+}
+
+element {
+  children: [element-icon, element-text];
+}
+
+element-icon {
+  padding: 10px 10px;
+}
+
+element-text {
+  padding: 10px 0;
+  text-color: @fg;
+}
+
+element-text selected {
+  background-color: @bg-alt;
+  text-color: @fg-alt;
+}
+
+element-icon selected {
+  background-color: @bg-alt;
+}
