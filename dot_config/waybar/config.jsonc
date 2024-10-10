@@ -1,0 +1,138 @@
+{
+    "layer": "top",
+    "spacing": 5,
+    "modules-left": [
+        "custom/arch",
+        "clock",
+        "clock#calendar",
+        "hyprland/workspaces",
+    ],
+
+    "modules-center": [
+        "hyprland/window",
+        "mpris",
+    ],
+
+    "modules-right": [
+        "pulseaudio",
+        "cpu",
+        "memory",
+        "temperature",
+        "backlight",
+        "battery",
+        "tray",
+        "custom/powermenu",
+    ],
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "format-icons": {
+            "1": "α",
+            "2": "β",
+            "3": "γ",
+            "4": "δ",
+            "5": "ε",
+            "6": "ζ",
+            "7": "η",
+            "8": "θ",
+            "9": "ι",
+        },
+    },
+
+    "custom/arch": {
+        "format": "   ",
+        "on-click": "wofi --show drun"
+    },
+
+    "custom/powermenu": {
+        "format": "   ",
+        "on-click": "shutdown now"
+    },
+
+    "hyprland/window": {
+        "format": "󱃷   {}",
+        "max-length": 30
+    },
+
+    "tray": {
+        "icon-size": 12,
+        "spacing": 10
+    },
+    "clock": {
+        // "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "   {:%H:%M}",
+    },
+
+    "clock#calendar": {
+        "format": "   {:%d %b %Y}"
+    },
+
+    "mpris": {
+        "format": "{player_icon}   {title} - {artist}",
+        "format-paused": "{status_icon}   {title} - {artist}",
+        "interval": 1,
+        "player": "spotify",
+        "player-icons": {
+            "default": ""
+        },
+        "status-icons": {
+            "paused": ""
+        },
+        "icon-size": 28,
+        "ignored-players": ["firefox"],
+        "max-length": 50
+    },
+
+    "cpu": {
+        "format": "   {usage}%",
+        "tooltip": false,
+        "interval": 2
+    },
+
+    "memory": {
+        "format": "   {}%"
+    },
+
+    "temperature": {
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{icon}  {temperatureC}°C",
+        "format-icons": ["", "", "", ""]
+    },
+
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{icon}   {percent}%",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "interval": 60,
+        "format": "{icon}  {capacity}%",
+        "format-full": "󰁹  {capacity}%",
+        "format-charging": "󰂄  {capacity}%",
+        "format-plugged": "{icon}  {capacity}%",
+        "format-alt": "{time}",
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+
+    "pulseaudio": {
+        "format": "{icon}   {volume}%",
+        "format-bluetooth": "󰂯    {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "default": ["", "", ""]
+        },
+        "scroll-step": 1,
+        "on-click": "pavucontrol",
+        "ignored-sinks": ["Easy Effects Sink"]
+    }
+}

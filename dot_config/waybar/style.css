@@ -1,0 +1,84 @@
+@import "./rose-pine.css";
+
+* {
+    border: none;
+    font-family: Acre, Iosevka Nerd Font;
+    /* font-family: JetBrains Mono Nerd Font; */
+    /* font-family: Iosevka Nerd Font; */
+    min-height: 0;
+    font-size: 12px;
+    font-weight: 600;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    /* color: @base; */
+    /* padding: 1.5px 2px 1.5px 4px; */
+    border-radius: 5px;
+    margin: 0; 
+}
+
+window#waybar {
+    background-color: rgba(31, 29, 46, 0.9);
+}
+
+tooltip {
+    background-color: @base;
+}
+
+#custom-arch,
+#clock {
+    background-color: @base;
+    color: @foam;
+}
+
+#workspaces {
+    background-color: @base;
+    color: @overlay;
+}
+
+#workspaces button.active {
+    color: @love;
+}
+
+#mpris,
+#window {
+    background-color: @base;
+    color: @foam;
+}
+
+#pulseaudio,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#battery,
+#tray {
+    background-color: @base;
+    color: @gold;
+}
+
+#cpu {
+    color: @iris;
+}
+
+#memory {
+    color: @foam;
+}
+
+#temperature {
+    color: @rose;
+}
+
+#battery {
+    color: @text;
+}
+
+#tray menu {
+    background-color: @base;
+}
+
+#custom-powermenu {
+    background-color: @base;
+    color: @love;
+}
