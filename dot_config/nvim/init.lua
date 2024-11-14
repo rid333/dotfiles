@@ -1,4 +1,5 @@
 vim.opt.termguicolors = true
+
 require("config.")
 
 if vim.g.neovide then
