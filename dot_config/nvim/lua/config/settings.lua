@@ -1,5 +1,5 @@
 vim.opt.number = true
-vim.opt.mouse = 'a'
+vim.opt.mouse = "a"
 vim.opt.showmode = false
 vim.opt.relativenumber = true
 
@@ -12,9 +12,7 @@ vim.opt.expandtab = true
 -- vim.opt.guicursor = "a:blinkon100"
 
 --  See `:help 'clipboard'`
-vim.schedule(function()
-    vim.opt.clipboard = 'unnamedplus'
-end)
+vim.opt.clipboard = "unnamedplus"
 
 vim.opt.breakindent = true
 
@@ -27,10 +25,10 @@ vim.opt.smartcase = true
 vim.opt.smartindent = true
 
 -- Keep signcolumn on by default
-vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = "yes"
 
 -- Show which line your cursor is on
 vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 10
+vim.opt.scrolloff = 999

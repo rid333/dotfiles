@@ -1,6 +1,5 @@
 return {
-    'vyfor/cord.nvim',
-    build = './build || .\\build',
-    event = 'VeryLazy',
-    opts = {}, -- calls require('cord').setup()
+	"vyfor/cord.nvim",
+	build = ":Cord update",
+	-- opts = {}
 }
